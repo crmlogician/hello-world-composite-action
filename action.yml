@@ -12,8 +12,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: |
-      echo "New version"
+    - run: echo "New version"
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
     - id: random-number-generator
