@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: actions/checkout@v3
       - id: foo
         uses: crmlogician/hello-world-composite-action@v1
         with:
           who-to-greet: 'Mona the Octocat'
+      - uses: actions/checkout@v3
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
