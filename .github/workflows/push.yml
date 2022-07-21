@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: foo
-        uses: crmlogician/hello-world-composite-action/.github/workflows/hello-world-composite-action@v1
+        uses: actions/dk-test-hello-world@v1
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
