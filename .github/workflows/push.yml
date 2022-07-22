@@ -8,7 +8,6 @@ jobs:
       - name: DK Test Hello World
         id: foo
         uses: crmlogician/hello-world-composite-action@v4
-
         with:
           who-to-greet: 'Mona the Octocat'
       - uses: actions/checkout@v3
