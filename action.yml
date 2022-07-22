@@ -6,9 +6,9 @@ inputs:
     required: true
     default: 'World'
 secrets:
-  SFDC_CLIENT_ID: 
+  SFDC_ID: 
     description: client id of coonect app
-  SFDC_CLIENT_SECRET: 
+  SFDC_SECRET: 
     description: client secrets of coonect app
 outputs:
   random-number:
@@ -20,8 +20,8 @@ runs:
     - run: |
         echo "New version"
         echo "Multi line "
-        echo secret SFDC_CLIENT_ID ${{ secrets.SFDC_CLIENT_ID }}
-        echo secret SFDC_CLIENT_SECRET ${{ secrets.SFDC_CLIENT_SECRET }}
+        echo secret SFDC_ID ${{ secrets.SFDC_ID }}
+        echo secret SFDC_SECRET ${{ secrets.SFDC_SECRET }}
       shell: bash
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
