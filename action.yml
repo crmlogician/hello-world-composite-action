@@ -12,7 +12,9 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: echo "New version"
+    - run: |
+        echo "New version"
+        echo "Multi line "
       shell: bash
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
