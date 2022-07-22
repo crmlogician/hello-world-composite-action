@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: DK Test Hello World
         id: foo
-        uses: crmlogician/hello-world-composite-action@v6
+        uses: crmlogician/hello-world-composite-action@v8
         with:
           who-to-greet: 'Mona the Octocat'
       - uses: actions/checkout@v3
