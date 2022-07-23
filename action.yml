@@ -5,6 +5,9 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+secrets:
+  token:
+    type: string
 outputs:
   random-number:
     description: "Random number"
@@ -15,6 +18,7 @@ runs:
     - run: |
         echo "New version"
         echo "Multi line "
+        echo ${{ secrets.token }}
       shell: bash
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
