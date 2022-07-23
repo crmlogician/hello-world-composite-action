@@ -5,11 +5,6 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
-secrets:
-  SFDC_ID: 
-    description: client id of coonect app
-  SFDC_SECRET: 
-    description: client secrets of coonect app
 outputs:
   random-number:
     description: "Random number"
@@ -20,8 +15,6 @@ runs:
     - run: |
         echo "New version"
         echo "Multi line "
-        echo secret SFDC_ID ${{ secrets.SFDC_ID }}
-        echo secret SFDC_SECRET ${{ secrets.SFDC_SECRET }}
       shell: bash
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
